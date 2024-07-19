@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title=f"{st.secrets.testing.pass}",
+    page_title='st.secrets.testing.pass',
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
@@ -103,7 +103,7 @@ filtered_gdp_df = gdp_df[
     & (gdp_df['Year'] <= to_year)
     & (from_year <= gdp_df['Year'])
 ]
-
+st.header(f"{st.experimental_user.email}")
 st.header('GDP over time', divider='gray')
 
 ''
